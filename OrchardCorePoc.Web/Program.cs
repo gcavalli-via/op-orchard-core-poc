@@ -1,6 +1,9 @@
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddOrchardCms();
+
 var app = builder.Build();
 
-app.MapGet("/", () => "Hello World!");
+app.UseOrchardCore();
 
 app.Run();
